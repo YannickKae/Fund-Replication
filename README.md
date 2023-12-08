@@ -33,8 +33,6 @@ Here, the following self-explanatory optimization constraints can be specified:
 
   $$\beta_j \geq 0 \quad \forall j \in\{1,2, \ldots, m\}$$
 
-  is the contraint
-
 - Leverage Constraint (if `leverage_constraint` is `True`):
 
   $$0 \leq \sum_{j=1}^m \beta_j \leq 1$$  
