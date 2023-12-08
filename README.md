@@ -7,15 +7,15 @@
   <i>Replication of the DAX with global Smart Beta / Factor ETFs</i>
 </p>
 
-Oft stellen Publikums-Fonds und andere Finanz-Produkte eine nachteilige, d.h. bspw. zu teure oder kapitalineffiziente Neuverpackung günstigerer elemetarer Portfoliobausteine / Faktoren dar. Um das zu überprüfen, habe ich dieses Jupyter Notebook zusammengestellt.
+Often, mutual funds and other financial products represent a disadvantageous, i.e., for example, too expensive or capital-inefficient, repackaging of cheaper, elementary portfolio components. To check this, I have compiled this Jupyter Notebook, which works as follows:
 
 ## Optimizer / Customizable Linear Regression
 
-Zunächst habe ich eine Funktion `linear_regression` definiert, welche einen Paramater-Vektor $\beta $, in diesem Fall die Gewichtungen der Portfoliobausteine, welche zur Replikation genutzt werden sollen, ermittellt. Dabei lassen sich folgende Paramater spezifizieren:
+First, I defined a function `linear_regression` that determines a parameter vector $\beta $, in this case, the weights of the portfolio components that are to be used for replication. The following parameters can be specified:
 
 ### Loss / Objective Function
 
-Hier stehen zwei gängige Verlust-Funktionen zur Verfügungen zur Verfügung:
+Here are two common loss functions available:
 
 - For Mean Squared Error (`mse`):
 
@@ -27,7 +27,7 @@ $$ \min_{\boldsymbol{\beta}} \frac{1}{n} \sum_{i=1}^{n} |y_i - X_i \boldsymbol{\
 
 ### Constraints
 
-Hier lassen sich jeweils selbsterklärend folgende Optimierungs-Beschränkungen spezifizieren
+Here, the following self-explanatory optimization constraints can be specified:
 
 - Long-Only Constraint (if `long_only_constraint` is `True`):
 
@@ -45,15 +45,15 @@ The optimization is performed using the *Sequential Least Squares Programming* (
 
 ## Application
 
-Hier können nun die jeweiligen Ticker `assets` und `target` der Wertpapiere von Interesse, wie sie auch auf *Yahoo Finance* geführt werden, speifiziert und die oben definierte Funktion angewandt werden. Das Resultat sind *Portfolio Gewichtungen* $\beta $, der *Determinations-Koeffizient* der linearen Optimierung, die *Korrelation* des replizierenden Portfolios zum Fund und der *Trackking Error*, welcher die Sample-Standardabweichung der Differenz-Renditen darstellt.
+Here, the respective tickers `assets` and `target` of the securities of interest, as they are listed on [*Yahoo Finance*](https://finance.yahoo.com/), can be specified, and the above-defined function can be applied. The results are *Portfolio Weights* $\beta $, the *Coefficient of Determination* of the linear fitting, the *Correlation* of the replicating portfolio to the fund, and the *Tracking Error*, which represents the sample standard deviation of the differences in returns.
 
-Falls der Fonds nicht eindeutig repliziert werden kann, ist im Notebook sowohl ein Bootstrapping-Test der Fund Sharpe Ratio in Relation zur Sharpe Ratio des replizierendes Portfolios und eine CAPM-Regression, zur Bestimmung des Alphas, angewähnt. So kann untersucht werden, wie statistisch signifikant die Unterschiede sind.
+If the fund cannot be well replicated, the notebook includes both a **bootstrap test** of the fund's Sharpe ratio relative to the Sharpe ratio of the replicating portfolio and a **CAPM regression** to determine the *alpha*. This can be used to examine how statistically significant the differences are.
 
-Der Bootstrapping Test gibt folgenden Plot und einen *p-Wert* für die rechtsseitige Alternativ-Hypothese $H_1 : SR_{Fund} > SR_{Portfolio} $ aus:
+The bootstrap test produces the following plot and a *p-value* for the right-side alternative hypothesis $H_1 : SR_{Fund} > SR_{Portfolio} $:
 
 <p align="center">
   <img src="Null Distribution of Replication Portfolio Sharpe Ratios.png" alt="Replication of the DAX with global Smart Beta / Factor ETFs" style="width:100%">
 </p>
 <p align="center">
-  <i>Null Distribution of Replication Portfolio Sharpe Ratios</i>
+  <i>Null Distribution of Replication Portfolio Sharpe Ratios for the DAX</i>
 </p>
