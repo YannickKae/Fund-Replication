@@ -45,7 +45,7 @@ The optimization is performed using the *Sequential Least Squares Programming* (
 
 Here, the respective tickers `assets` and `target` of the securities of interest, as they are listed on [*Yahoo Finance*](https://finance.yahoo.com/), can be specified, and the above-defined function can be applied. The results are *Portfolio Weights* $\beta $, the *Coefficient of Determination* of the linear fitting, the *Correlation* of the replicating portfolio to the fund, and the *Tracking Error*, which represents the sample standard deviation of the differences in returns.
 
-If the fund cannot be well replicated, the notebook includes both a **bootstrap test** of the fund's Sharpe ratio relative to the Sharpe ratio of the replicating portfolio and a **CAPM regression** to determine the *alpha*. This can be used to examine how statistically significant the differences are.
+If the fund cannot be well replicated, the notebook includes both a **bootstrap test** of the fund's Sharpe ratio relative to the Sharpe ratio of the replicating portfolio and a **1-factor regression** to determine the *alpha*. This can be used to examine how statistically significant the differences are.
 
 The bootstrap test produces the following plot and a *p-value* for the right-side alternative hypothesis $H_1 : SR_{Fund} > SR_{Portfolio} $:
 
