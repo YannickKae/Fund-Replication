@@ -29,7 +29,7 @@ $$ \min_{\boldsymbol{\beta}} \frac{1}{n} \sum_{i=1}^{n} |y_i - X_i \boldsymbol{\
 
 $$ \min_{\boldsymbol{\beta}} \sqrt{\frac{1}{n - 1} \sum_{i=1}^{n} (y_i - X_i \boldsymbol{\beta})^2} $$
 
-- Quantile Loss (`quantile`):
+- Quantile Loss (`q`):
 
 $$ \min_{\boldsymbol{\beta}} \frac{1}{n} \sum_{i=1}^{n} \rho_{\tau}(y_i - X_i \boldsymbol{\beta}) $$
 
