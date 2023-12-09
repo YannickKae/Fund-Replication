@@ -13,7 +13,7 @@ Often, mutual funds and other financial products represent a disadvantageous, i.
 
 First, I defined a function `weight_optimization` that determines a parameter vector $\beta $, in this case, the weights of the portfolio components that are to be used for replication. The following parameters can be specified:
 
-### Loss / Objective Function
+### Loss Function
 
 Here are two common loss functions available:
 
