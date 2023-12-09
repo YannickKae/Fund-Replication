@@ -47,7 +47,7 @@ Here, the following self-explanatory optimization constraints can be specified:
 
 ### Number of Assets Contraint
 
-It's possible to limit the number of used assets by the paramater `max_assets`. This means that a large number of potential assets can be provided, and the function will use the subset of the desired or smaller cardinality that produces the best result. However, since the function accomplishes this through iterative combinatorial means, the runtime may potentially be slightly extended.
+It's possible to limit the number of used assets by the paramater `max_assets`. This means that a large number of potential assets can be provided, and the function will use the subset of the desired cardinality that produces the best result. However, since the function accomplishes this through iterative combinatorial means, the runtime may potentially be slightly extended.
 
 ### Optimization Method
 
