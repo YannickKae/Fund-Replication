@@ -9,9 +9,9 @@
 
 Often, mutual funds and other financial products represent a disadvantageous, i.e., for example, too expensive or capital-inefficient, repackaging of cheaper, elementary portfolio components. To check this, I have compiled this Jupyter Notebook, which works as follows:
 
-## Optimizer / Customizable Linear Regression
+## Optimizer
 
-First, I defined a function `linear_regression` that determines a parameter vector $\beta $, in this case, the weights of the portfolio components that are to be used for replication. The following parameters can be specified:
+First, I defined a function `weight_optimization` that determines a parameter vector $\beta $, in this case, the weights of the portfolio components that are to be used for replication. The following parameters can be specified:
 
 ### Loss / Objective Function
 
