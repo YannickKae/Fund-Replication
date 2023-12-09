@@ -17,13 +17,17 @@ First, I defined a function `linear_regression` that determines a parameter vect
 
 Here are two common loss functions available:
 
-- For Mean Squared Error (`mse`):
+- Mean Squared Error (`mse`):
 
 $$ \min_{\boldsymbol{\beta}} \frac{1}{n} \sum_{i=1}^{n} (y_i - X_i \boldsymbol{\beta})^2 $$
 
-- For Mean Absolute Error (`mae`):
+- Mean Absolute Error (`mae`):
 
 $$ \min_{\boldsymbol{\beta}} \frac{1}{n} \sum_{i=1}^{n} |y_i - X_i \boldsymbol{\beta}| $$
+
+- Tracking Error (`te`):
+
+$$ \min_{\boldsymbol{\beta}} \sqrt{\frac{1}{n - 1} \sum_{i=1}^{n} (y_i - X_i \boldsymbol{\beta})^2} $$
 
 ### Constraints
 
