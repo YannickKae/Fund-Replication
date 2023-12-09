@@ -29,7 +29,7 @@ $$ \min_{\boldsymbol{\beta}} \frac{1}{n} \sum_{i=1}^{n} |y_i - X_i \boldsymbol{\
 
 $$ \min_{\boldsymbol{\beta}} \sqrt{\frac{1}{n - 1} \sum_{i=1}^{n} (y_i - X_i \boldsymbol{\beta})^2} $$
 
-### Constraints
+### Weight Constraints
 
 Here, the following self-explanatory optimization constraints can be specified:
 
@@ -41,9 +41,15 @@ Here, the following self-explanatory optimization constraints can be specified:
 
   $$0 \leq \sum_{j=1}^m \beta_j \leq 1$$  
 
+### Number of Assets Contraint
+
+The function also allows limiting the number of used assets by its paramater `max_assets`. This means that a large number of potential assets can be provided, and the function will use the subset of the desired or smaller cardinality that produces the best result. However, since the function accomplishes this through iterative combinatorial means, the runtime may potentially be slightly extended.
+
 ### Optimization Method
 
 The optimization is performed using the *Sequential Least Squares Programming* (`SLSQP`) method or any other multivariate method from the [`scipy`](https://docs.scipy.org/doc/scipy/reference/optimize.html#local-multivariate-optimization) library specified by the `optimizer` parameter.
+
+### 
 
 ## Application
 
