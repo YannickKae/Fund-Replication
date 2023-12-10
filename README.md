@@ -15,7 +15,7 @@ First, I defined a function `weight_optimization` that determines a parameter ve
 
 ### Loss Function
 
-Here are two common `loss` functions available:
+Here are four common `loss` functions available:
 
 - Mean Squared Error (`mse`):
 
