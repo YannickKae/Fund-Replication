@@ -51,7 +51,7 @@ It's possible to limit the number of used assets by the paramater `max_assets`. 
 
 ### Optimization Method
 
-The optimization is performed using the *Sequential Least Squares Programming* (`SLSQP`) method or any other multivariate method from the [`scipy`](https://docs.scipy.org/doc/scipy/reference/optimize.html#local-multivariate-optimization) library specified by the `optimizer` parameter.
+The optimization is performed using the *Sequential Least Squares Programming* (`SLSQP`) method or any other multivariate method from the [`scipy`](https://docs.scipy.org/doc/scipy/reference/optimize.html#local-multivariate-optimization) library specified by the `optimizer` parameter. However, not all methods reliably find the global optimum. I recommend sticking with `SLSQP`.
 
 ### 
 
