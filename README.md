@@ -69,3 +69,5 @@ The bootstrap test produces the following plot and a *p-value* for the right-sid
 <p align="center">
   <i>Null Distribution of Replication Portfolio Sharpe Ratios for the DAX</i>
 </p>
+
+This notebook can also be used to find an appropriate benchmark, for example, by passing an extensive list of potential alternatives to the `weight_optimization` function and setting the `max_assets` parameter to `1`.
