@@ -7,7 +7,7 @@
   <i>Replication of the DAX with global Smart Beta / Factor ETFs</i>
 </p>
 
-Often, mutual funds and other financial products represent a disadvantageous, i.e., for example, too expensive or capital-inefficient, repackaging of cheaper, elementary portfolio components. To check this, I have compiled this Jupyter Notebook, which works as follows:
+Most investment products are disadvantageous (too expensive or capital inefficient) repackagings of elementary portfolio components, such as global equity & fixed income exposure. To check this, I have compiled this Jupyter Notebook, which works as follows:
 
 ## Optimizer
 
